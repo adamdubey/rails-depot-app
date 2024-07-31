@@ -63,17 +63,3 @@ Product.create!(title: 'Mastering Sidekiq',
     image_url: 'sidekiq-book.jpg',
     price: 30.00)
 # . . .
-
-# . . .
-Product.create!(title: 'Kubernetes in Action',
-    description:
-        %{<p>
-        <em>"Kubernetes in Action"</em> 
-        is a comprehensive guide to mastering Kubernetes, the leading container orchestration platform. 
-        Authored by Lisa White, this book covers the essential concepts and advanced techniques needed to deploy, manage, and scale containerized applications with Kubernetes. 
-        Readers will explore Kubernetes architecture, installation, and configuration, as well as best practices for security, monitoring, and troubleshooting. 
-        With practical examples and step-by-step tutorials, this book provides a solid foundation for anyone looking to leverage Kubernetes to enhance their DevOps workflow and achieve efficient and scalable application management.
-    </p>},
-    image_url: 'kubernetes-book.jpg',
-    price: 45.00)
-# . . .
