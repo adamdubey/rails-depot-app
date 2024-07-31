@@ -28,11 +28,15 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to cart_url(@line_item.cart) }
-        format.json { render :show, status: :created, location: @line_item }
+        format.turbo_stream { @current_item = @line_item }
+        format.html { redirect_to store_index_url }
+        format.json { render :show,
+          status: :created, location: @line_item }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+        format.html { render :new,
+          status: :unprocessable_entity }
+        format.json { render json: @line_item.errors,
+          status: :unprocessable_entity }
       end
     end
   end
@@ -52,7 +56,7 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1 or /line_items/1.json
   def destroy
-    @line_item.destroy!
+    @line_item.destroy
 
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: "Line item was successfully destroyed." }
@@ -70,4 +74,5 @@ class LineItemsController < ApplicationController
     def line_item_params
       params.require(:line_item).permit(:product_id)
     end
+  #...
 end
