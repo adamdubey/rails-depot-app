@@ -28,8 +28,19 @@
           <li><a href="/news">News</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
+
+        <% if session[:user_id] %>
+        <hr class="my-2">
+
+        <ul class="text-gray-300 leading-8">
+          <li><%= link_to 'Orders', orders_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Users', users_path %></li>
+          <li><%= button_to 'Logout', logout_path, method: :delete %></li>
+        </ul>
+      <% end %>
         <br />
-        <h4><b>Current Date and Time <em>UTC</em></b></h4>
+        <h4><em>Welcome!</em></h4>
         <p><%= formatted_datetime %></p>
       </nav>
 
