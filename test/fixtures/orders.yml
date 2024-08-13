@@ -6,6 +6,19 @@ one:
   email: dave@notwendysdavethomas.com
   pay_type: Check
 
+another_one:
+  name: Dave Thomas
+  address: 123 Any St
+  email: dave@notwendysdavethomas.com
+  pay_type: Check
+  created_at: <%= 2.days.ago %>
+
+other_customer:
+  name: Chuck Livingston
+  address: 123 Grapeseed Ave
+  email: boatboy@example.com
+  pay_type: Check
+
 two:
   name: MyString
   address: MyText
