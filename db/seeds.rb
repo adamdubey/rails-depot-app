@@ -64,5 +64,7 @@ Product.create!(title: 'Mastering Sidekiq',
     price: 30.00)
 # . . .
 
-User.create! name: 'jim'
+# . . .
+User.create! name: 'jim',
         password: Rails.application.credentials.jim_password
+# . . .
