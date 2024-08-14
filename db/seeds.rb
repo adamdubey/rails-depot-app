@@ -63,3 +63,8 @@ Product.create!(title: 'Mastering Sidekiq',
     image_url: 'sidekiq-book.jpg',
     price: 30.00)
 # . . .
+
+# . . .
+User.create! name: 'jim',
+        password: Rails.application.credentials.jim_password
+# . . .
